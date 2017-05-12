@@ -6,11 +6,11 @@
     <script src="angular.min.js"></script>
     <script src="app.js"></script>
   </head>
-  <body>
-    <h1>Hello Coursera</h1>
-    <div ng-controller='MyFirstController'>
+  <body ng-controller='MyFirstController'>
+    <h1>{{hello}}</h1>
+    <div>
       {{ name }}
-      <input type="text" ng-model="name">
+      <input type="text" ng-model="name" ng-keyup="sayHello()">
     </div>
   </body>
 </html>
