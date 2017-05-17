@@ -10,10 +10,14 @@
   <body>
     <h1>Expressions and Interpolation</h1>
     <div ng-controller='MsgController'>
-      <input ng-model='name' type='text'>
+      <input ng-model='name' type='text'><br>
       Message is: {{sayMessage()}}<br>
+      Message two is: {{sayLovesMessage()}}<br>
+      Message three is: {{sayLovesMessage() | truth : 'Nine Inch Nails' : 'Taylor Swift'}}<br>
+      Message three is: {{sayLovesMessage() | truth : 'Nine Inch Nails' : 'Taylor Swift' | uppercase}}<br>
       <div>
         <button ng-click='changeImage()'>Change Image</button>
+        Cost: {{ cookieCost | currency : '#blah' : 4 }}
         <br>
         <img ng-src='images/scirules_{{colors[color]}}.gif'>
 
